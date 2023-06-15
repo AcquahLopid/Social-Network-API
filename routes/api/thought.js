@@ -14,7 +14,7 @@ const {
 // routes
 route.route('/').get(getThoughts); // homepage
 route.route('/:userId').post(createThought); // created thoughts
-route.route('/:userId/:thoughtId').get(getThoughtById).put(addReaction).delete(deleteThought); // CRUD routes for thoughtController
+route.route('/:userId/:thoughtId').get(getThoughtById).put(updateThought).put(addReaction).delete(deleteThought); // CRUD routes for thoughtController
 route.route('/:thoughtId/reactions/:reactionId').delete(removeReaction); // delete for reactions
 
 module.exports = route;
